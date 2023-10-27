@@ -297,7 +297,7 @@ body {
     flex-direction: column;
     flex-basis: 25%;
     height: 10vh;
-    background-image: url('/resources/station_logoBg_low.png');
+    background-image: url('resources/station_logoBg_low.png');
 }
 
 #home-main #stations-section #stations-logo-container img {
@@ -336,27 +336,27 @@ h4 {
 }
 
 #love-stations {
-    background-image: url('/resources/love_stations_low.png');
+    background-image: url('resources/love_stations_low.png');
 }
 
 #retro-stations {
-    background-image: url('/resources/retro_stations_low.png');
+    background-image: url('resources/retro_stations_low.png');
 }
 
 #chill-stations {
-    background-image: url('/resources/chill_stations_low.png');
+    background-image: url('resources/chill_stations_low.png');
 }
 
 #workout-stations {
-    background-image: url('/resources/workout_stations_low.png');
+    background-image: url('resources/workout_stations_low.png');
 }
 
 #rock-stations {
-    background-image: url('/resources/rock_stations_low.png');
+    background-image: url('resources/rock_stations_low.png');
 }
 
 #pop-stations {
-    background-image: url('/resources/pop_stations_low.png');
+    background-image: url('resources/pop_stations_low.png');
 }
 
 /*!..................... 2nd Line of Stations ..................*/
