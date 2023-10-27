@@ -1,0 +1,445 @@
+/* TILT NEON FONT */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+/* POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+
+    --purple-blue-color: #6e57e0;
+    --purple-black-color: #242329;
+    --purple-white-color: #fbfbfe;
+    --purple-lite-white-color: #babad1;
+    --background-color: #0b1026;
+    --background-color-lite: #11193e;
+
+}
+
+/*!.............. Reusable Code .............*/
+#home-main section {
+    padding-left: 1rem;
+    width: 100vw;
+    height: fit-content;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: var(--purple-white-color);
+}
+
+.section-content {
+    padding-top: 0.8rem;
+}
+
+.height-10vh {
+    height: 10vh;
+}
+
+.flex-properties {
+    display: flex;
+    flex-shrink: 0;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-img {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* 2nd line Stations */
+.stations-2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.stations-2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+/* Popular Artist, Latest English, Latest Hindi */
+.container {
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+}
+
+.container>* {
+    flex-basis: 20%;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.container .element img {
+    width: 100%;
+}
+
+.container .element h3 {
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: var(--purple-white-color);
+}
+
+/*!.................................................... */
+
+/*!........... Main Body.............. */
+body {
+    width: 100vw;
+    background-color: var(--background-color);
+    padding-bottom: 12vh;
+}
+
+/*!....................... Home Header ..............*/
+#home-header {
+    height: fit-content;
+}
+
+/*!.................. Melody Logo ................*/
+#home-header #melody-logo {
+    padding: 0.4rem 0px 0px 0.8rem;
+}
+
+/*!..................... Mobile Navigation Bar ..................*/
+#home-header #navbar-mobile {
+    position: fixed;
+    background-color: var(--background-color);
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 7.5vh;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 30px black;
+    z-index: 100;
+}
+
+#navbar-mobile ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+#navbar-mobile ul li {
+    width: 25%;
+    list-style: none;
+}
+
+#navbar-mobile ul li a {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--purple-lite-white-color);
+    font-size: 0.8rem;
+}
+
+#navbar-mobile ul li a {
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+#navbar-mobile ul li a i {
+    font-size: 1.5rem;
+}
+
+/*! HOME MAIN */
+#home-main {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+/*!..................... Musical Promo Banner ......................*/
+#banner-section {
+    display: flex;
+    gap: 0.8rem;
+    padding-top: 0.4rem;
+    overflow-x: auto;
+}
+
+#banner-section>* {
+    flex-basis: 50%;
+    flex-shrink: 0;
+}
+
+#banner-section img {
+    width: 100%;
+}
+
+/*!..................Latest Release List................... */
+#latest-music-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+#latest-music-container>* {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#latest-music-container .img-container{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#latest-music-container .img-container img{
+    width: 100%;
+    height: 100%;
+}
+#latest-music-container .img-container i{
+    font-size: 1.5rem;
+    z-index: 10;
+    position: absolute;
+    color: var(--purple-white-color);
+    display: none;
+}
+#latest-music-container .img-container::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: black;
+    opacity: 0.4;
+    display: none;
+}
+#latest-music-container .img-container:hover .pause{
+    display: block;
+}
+#latest-music-container .img-container:hover::after{
+    display: block;
+}
+.music-details-container {
+    display: flex;
+    width: 65%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.6rem;
+    color: var(--purple-lite-white-color);
+}
+
+.music-details-container .music-name h3 {
+    color: var(--purple-white-color);
+    font-weight: 600;
+}
+
+.music-details-container .nav {
+    align-self: flex-start;
+    text-align: center;
+    padding-right: 0.6rem;
+    font-size: 0.5rem;
+}
+
+.music-details-container .nav i {
+    font-size: 1rem;
+}
+
+/*!.................... Popular Artists Section .................*/
+/* #artist-container{
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+}
+#artist-container>*{
+    flex-basis: 20%;
+    flex-shrink: 0;
+    text-align: center;
+}
+#artist-container .artist img{
+    width: 100%;
+}
+#artist-container .artist h3{
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: var(--purple-white-color);
+} */
+
+/*!................. Stations Section .................*/
+#home-main #stations-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+#home-main #stations-section .container {
+    display: flex;
+    background-color: var(--background-color-lite);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    overflow-x: auto;
+}
+
+#home-main #stations-section #stations-logo-container {
+    flex-direction: column;
+    flex-basis: 25%;
+    height: 10vh;
+    background-image: url('/resources/station_logoBg_low.png');
+}
+
+#home-main #stations-section #stations-logo-container img {
+    width: 40%;
+}
+
+#home-main #stations-section .container ul {
+    display: flex;
+    gap: 1rem;
+    flex-basis: 70%;
+    flex-shrink: 0;
+}
+
+#home-main #stations-section .container ul li {
+    flex-basis: 25%;
+    flex-shrink: 0;
+    list-style: none;
+    border-radius: 50%;
+}
+
+#home-main #stations-section a {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#home-main #stations-section h3,
+h4 {
+    color: var(--purple-white-color);
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+#love-stations {
+    background-image: url('/resources/love_stations_low.png');
+}
+
+#retro-stations {
+    background-image: url('/resources/retro_stations_low.png');
+}
+
+#chill-stations {
+    background-image: url('/resources/chill_stations_low.png');
+}
+
+#workout-stations {
+    background-image: url('/resources/workout_stations_low.png');
+}
+
+#rock-stations {
+    background-image: url('/resources/rock_stations_low.png');
+}
+
+#pop-stations {
+    background-image: url('/resources/pop_stations_low.png');
+}
+
+/*!..................... 2nd Line of Stations ..................*/
+#home-main #stations-section #sec-line {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+#home-main #stations-section #sec-line>* {
+    flex-basis: 32%;
+    flex-shrink: 0;
+}
+
+.zoom-img-stations {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.stations-2:hover .zoom-img-stations {
+    transform: scale(1.5);
+}
+
+#party-stations::after {
+    /* background-color: orangered; */
+    background-image: linear-gradient(rgb(255, 166, 0), rgb(255, 55, 55));
+}
+
+#electronic-stations::after {
+    /* background-color: rgb(113, 113, 255); */
+    background-image: linear-gradient(rgb(39, 255, 255), rgb(52, 52, 255) 100%);
+}
+
+#road-stations::after {
+    /* background-color: rgb(158, 149, 29); */
+    background-image: linear-gradient(rgb(216, 216, 0), rgb(255, 81, 0));
+}
+
+/*!............... Latest English Section ................*/
+/* #latest-eng-container{
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+}
+#latest-eng-container>*{
+    flex-basis: 20%;
+    flex-shrink: 0;
+    text-align: center;
+}
+#latest-eng-container div img{
+    width: 100%;
+}
+#latest-eng-container div h3{
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: var(--purple-white-color);
+} */
+
+/*!............... Latest Hindi Section ................*/
+/* #latest-hindi-container{
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+}
+#latest-hindi-container>*{
+    flex-basis: 20%;
+    flex-shrink: 0;
+    text-align: center;
+}
+#latest-hindi-container div img{
+    width: 100%;
+}
+#latest-hindi-container div h3{
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: var(--purple-white-color);
+} */
+
+/*! Latest English Song & Latest Hindi Song */
+#latest-eng-container h3,
+#latest-hindi-container h3 {
+    font-size: 0.65rem;
+}
