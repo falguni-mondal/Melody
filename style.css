@@ -42,6 +42,12 @@
     height: 10vh;
 }
 
+/* Latest-Music-Options-Home */
+.border-bottom-white{
+    border-bottom: 1px solid var(--purple-lite-white-color);
+}
+/* ................................................ */
+
 .flex-properties {
     display: flex;
     flex-shrink: 0;
@@ -189,10 +195,11 @@ body {
     gap: 1rem;
 }
 
-#latest-music-container>* {
+#latest-music-container .music-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
 }
 
 #latest-music-container .img-container{
@@ -251,9 +258,45 @@ body {
     padding-right: 0.6rem;
     font-size: 0.5rem;
 }
-
+.music-details-container .nav a{
+    text-decoration: none;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--purple-lite-white-color);
+}
 .music-details-container .nav i {
     font-size: 1rem;
+}
+.nav .music-option-container{
+    position: absolute;
+    width: 65%;
+    height: fit-content;
+    z-index: 10;
+    border-radius: 3px;
+    padding: 0.2rem 0.4rem;
+    backdrop-filter: blur(40px);
+    right: 2rem;
+    top: 0.5rem;
+    transform: scale(0);
+    transition: all .2s ease-in-out;
+}
+.nav .music-option-container li{
+    list-style: none;
+    text-align: left;
+    line-height: 1.2rem;
+}
+.nav .music-option-container li a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--purple-white-color);
+}
+.nav .music-option-container li i{
+    font-size: 0.5rem;
+}
+.nav .music-option-container:target{
+    transform: scale(1);
 }
 
 /*!.................... Popular Artists Section .................*/
