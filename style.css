@@ -18,7 +18,7 @@
     --purple-white-color: #fbfbfe;
     --purple-lite-white-color: #babad1;
     --background-color: #0b1026;
-    --background-color-lite: #11193e;
+    --background-color-lite: #030e42;
 
 }
 
@@ -41,13 +41,11 @@
 .height-10vh {
     height: 10vh;
 }
-
 /* Latest-Music-Options-Home */
 .border-bottom-white{
     border-bottom: 1px solid var(--purple-lite-white-color);
 }
 /* ................................................ */
-
 .flex-properties {
     display: flex;
     flex-shrink: 0;
@@ -117,18 +115,70 @@ body {
 #home-header #melody-logo {
     padding: 0.4rem 0px 0px 0.8rem;
 }
-
-/*!..................... Mobile Navigation Bar ..................*/
-#home-header #navbar-mobile {
+/*!................. Bottom Fixed COntainer ................*/
+#home-header #bottom-fixed-container{
     position: fixed;
-    background-color: var(--background-color);
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 7.5vh;
     border-radius: 10px 10px 0px 0px;
     box-shadow: 0px 0px 30px black;
     z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+}
+/*!.............. Mobile Minimized Music Player ...................*/
+#bottom-fixed-container #music-player-mini-mobile{
+    width: 100%;
+    height: 7vh;
+    background-color: var(--background-color-lite);
+    padding: 0.2rem 1rem 0px 0.5rem;
+}
+#mini-player-mobile{
+    width: 100%;
+    height: 98%;
+}
+#mini-player-mobile #mini-player-img{
+    height: 95%;
+    width: fit-content;
+}
+#mini-player-img img{
+    height: 100%;
+}
+.music-controls{
+    width: 60%;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+}
+.music-controls a,
+.music-favourite a{
+    color: var(--purple-white-color);
+    font-size: 1rem;
+}
+.music-player-progress{
+    width: 100%;
+    height: 2%;
+}
+.music-player-progress .progress{
+    width: 30%;
+    height: 100%;
+    background-color: var(--purple-white-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.music-player-progress .progress i{
+    position: absolute;
+    color: var(--purple-white-color);
+    right: -3px;
+    font-size: 0.5rem;
+}
+/*!..................... Mobile Navigation Bar ..................*/
+#bottom-fixed-container #navbar-mobile {
+    /* background-color: var(--background-color); */
+    background-image: linear-gradient(rgba(0, 5, 27, 0.8), rgba(11, 16, 38, 1) 50%);
+    height: 7.5vh;
 }
 
 #navbar-mobile ul {
@@ -252,23 +302,23 @@ body {
     font-weight: 600;
 }
 
-.music-details-container .nav {
+.music-details-container .option-icon-rating {
     align-self: flex-start;
     text-align: center;
     padding-right: 0.6rem;
     font-size: 0.5rem;
 }
-.music-details-container .nav a{
+.music-details-container .option-icon-rating a{
     text-decoration: none;
     font-size: 0.6rem;
     font-style: normal;
     font-weight: 600;
     color: var(--purple-lite-white-color);
 }
-.music-details-container .nav i {
+.music-details-container .option-icon-rating i {
     font-size: 1rem;
 }
-.nav .music-option-container{
+.option-icon-rating .music-option-container{
     position: absolute;
     width: 65%;
     height: fit-content;
@@ -281,21 +331,21 @@ body {
     transform: scale(0);
     transition: all .2s ease-in-out;
 }
-.nav .music-option-container li{
+.option-icon-rating .music-option-container li{
     list-style: none;
     text-align: left;
     line-height: 1.2rem;
 }
-.nav .music-option-container li a{
+.option-icon-rating .music-option-container li a{
     display: flex;
     align-items: center;
     gap: 5px;
     color: var(--purple-white-color);
 }
-.nav .music-option-container li i{
+.option-icon-rating .music-option-container li i{
     font-size: 0.5rem;
 }
-.nav .music-option-container:target{
+.option-icon-rating .music-option-container:target{
     transform: scale(1);
 }
 
