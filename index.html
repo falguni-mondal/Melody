@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="resources/melody-site-icon.png">
     <meta name="author" content="Falguni Mondal">
     <meta name="keywords"
         content="melody, melody home, melody by falguni mondal, melody music streaming site, melody webapp, melody falguni mondal, melody github, github melody, melody by falguni, melody falguni, melody by falguni github, melody by falguni mondal github, melody music streaming platform, melody music">
     <meta name="description" content="Find your desired songs on Melody and stream them free with high quality.">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/melody-site-icon.png">
     <title>Melody | Home</title>
     <!--! ICON -->
     <!-- Css icons -->
@@ -28,14 +28,38 @@
         <div class="logo" id="melody-logo">
             <img src="resources/melody_logo_low.png" alt="" width="23%">
         </div>
-        <nav id="navbar-mobile">
-            <ul>
-                <li><a href=""><i class="uil uil-estate"></i>Home</a></li>
-                <li><a href=""><i class="uil uil-search"></i>Search</a></li>
-                <li><a href=""><i class="uil uil-books"></i>Your Library</a></li>
-                <li><a href=""><img src="resources/profile_picture_low.png" height="65%" alt=""></a></li>
-            </ul>
-        </nav>
+        <div id="bottom-fixed-container">
+            <div id="music-player-mini-mobile">
+                <div id="mini-player-mobile" class="flex-properties music-details-container">
+                    <div id="mini-player-img">
+                        <img src="resources/lal_ishq_music.jpg" alt="">
+                    </div>
+                    <div id="mini-player-music-details" class="music-name">
+                        <h3>Lal Ishq</h3>
+                        <p>Arijit Singh</p>
+                    </div>
+                    <div class="music-controls">
+                        <a href=""><i class="fa-solid fa-backward-step"></i></a>
+                        <a href=""><i class="fa-solid fa-play"></i></a>
+                        <a href=""><i class="fa-solid fa-forward-step"></i></a>
+                    </div>
+                    <div class="music-favourite">
+                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="music-player-progress">
+                    <div class="progress"><i class="fa-solid fa-circle"></i></div>
+                </div>
+            </div>
+            <nav id="navbar-mobile">
+                <ul>
+                    <li><a href=""><i class="uil uil-estate"></i>Home</a></li>
+                    <li><a href=""><i class="uil uil-search"></i>Search</a></li>
+                    <li><a href=""><i class="uil uil-books"></i>Your Library</a></li>
+                    <li><a href=""><img src="resources/profile_picture_low.png" height="65%" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main id="home-main">
         <!-- Music Banner Section -->
@@ -53,8 +77,8 @@
                 <!-- Music 1 -->
                 <div class="music-container">
                     <div class="img-container">
-                        <i class="fa-solid fa-play pause"></i>
-                        <i class="fa-solid fa-pause play"></i>
+                        <i class="fa-solid fa-play play"></i>
+                        <i class="fa-solid fa-pause pause"></i>
                         <img src="resources/lal_ishq_music.jpg" alt="" class="music-image" id="1st-music">
                     </div>
                     <div class="music-details-container">
@@ -62,7 +86,7 @@
                             <h3 class="music-title">Lal Ishq</h3>
                             <p>OCT 22, 2023</p>
                         </div>
-                        <div class="nav">
+                        <div class="option-icon-rating">
                             <a href="#music-option-container1">
                                 <i class="uil uil-ellipsis-h"></i>
                             </a>
@@ -82,8 +106,8 @@
                 <!-- Music 2 -->
                 <div class="music-container">
                     <div class="img-container">
-                        <i class="fa-solid fa-play pause"></i>
-                        <i class="fa-solid fa-pause play"></i>
+                        <i class="fa-solid fa-play play"></i>
+                        <i class="fa-solid fa-pause pause"></i>
                         <img src="resources/until_i_found_you_music.jpg" alt="" class="music-image" id="2nd-music">
                     </div>
                     <div class="music-details-container">
@@ -91,7 +115,7 @@
                             <h3 class="music-title">Until I Found You</h3>
                             <p>AUG 19, 2023</p>
                         </div>
-                        <div class="nav">
+                        <div class="option-icon-rating">
                             <a href="#music-option-container2">
                                 <i class="uil uil-ellipsis-h"></i>
                             </a>
@@ -111,8 +135,8 @@
                 <!-- Music 3 -->
                 <div class="music-container">
                     <div class="img-container">
-                        <i class="fa-solid fa-play pause"></i>
-                        <i class="fa-solid fa-pause play"></i>
+                        <i class="fa-solid fa-play play"></i>
+                        <i class="fa-solid fa-pause pause"></i>
                         <img src="resources/bolo_na_music.jpg" alt="" class="music-image" id="3rd-music">
                     </div>
                     <div class="music-details-container">
@@ -120,7 +144,7 @@
                             <h3 class="music-title">Bolo Na</h3>
                             <p>NOV 13, 2023</p>
                         </div>
-                        <div class="nav">
+                        <div class="option-icon-rating">
                             <a href="#music-option-container3">
                                 <i class="uil uil-ellipsis-h"></i>
                             </a>
@@ -140,8 +164,8 @@
                 <!-- Music 4 -->
                 <div class="music-container">
                     <div class="img-container">
-                        <i class="fa-solid fa-play pause"></i>
-                        <i class="fa-solid fa-pause play"></i>
+                        <i class="fa-solid fa-play play"></i>
+                        <i class="fa-solid fa-pause pause"></i>
                         <img src="resources/dandelions_music.jpg" alt="" class="music-image" id="4th-music">
                     </div>
                     <div class="music-details-container">
@@ -149,7 +173,7 @@
                             <h3 class="music-title">Dandelions</h3>
                             <p>OCT 08, 2023</p>
                         </div>
-                        <div class="nav">
+                        <div class="option-icon-rating">
                             <a href="#music-option-container4">
                                 <i class="uil uil-ellipsis-h"></i>
                             </a>
