@@ -23,11 +23,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="home-body">
     <header id="home-header">
         <div class="logo" id="melody-logo">
-            <img src="resources/melody_logo_low.png" alt="" width="23%">
+            <a href="index.html"><img src="resources/melody_logo_low.png" alt="" width="23%"></a>
         </div>
+        <!-- Search Section -->
+        <section id="search-target">
+            <form action="search_result.html" class="flex-properties">
+                <input type="text" autofocus placeholder="Search desired song">
+                <button type="submit"><i class="uil uil-search"></i></button>
+            </form>
+        </section>
         <div id="bottom-fixed-container">
             <div id="music-player-mini-mobile">
                 <div id="mini-player-mobile" class="flex-properties music-details-container">
@@ -54,13 +61,14 @@
             <nav id="navbar-mobile">
                 <ul>
                     <li><a href=""><i class="uil uil-estate"></i>Home</a></li>
-                    <li><a href=""><i class="uil uil-search"></i>Search</a></li>
+                    <li><a href="#search-target"><i class="uil uil-search"></i>Search</a></li>
                     <li><a href=""><i class="uil uil-books"></i>Your Library</a></li>
                     <li><a href=""><img src="resources/profile_picture_low.png" height="65%" alt=""></a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!--....................... HOME MAIN .......................-->
     <main id="home-main">
         <!-- Music Banner Section -->
         <section id="banner-section">
