@@ -9,8 +9,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
-
+*::-webkit-scrollbar{
+    display: none;
+}
 :root {
 
     --purple-blue-color: #6e57e0;
@@ -23,7 +26,7 @@
 }
 
 /*!.............. Reusable Code .............*/
-#home-main section {
+#home-body section {
     padding-left: 1rem;
     width: 100vw;
     height: fit-content;
@@ -99,11 +102,11 @@
 
 /*!.................................................... */
 
-/*!........... Main Body.............. */
+/*!........... Home Body.............. */
 body {
     width: 100vw;
     background-color: var(--background-color);
-    padding-bottom: 12vh;
+    padding-bottom: 17vh;
 }
 
 /*!....................... Home Header ..............*/
@@ -136,7 +139,7 @@ body {
 }
 #mini-player-mobile{
     width: 100%;
-    height: 98%;
+    height: 97%;
 }
 #mini-player-mobile #mini-player-img{
     height: 95%;
@@ -154,11 +157,11 @@ body {
 .music-controls a,
 .music-favourite a{
     color: var(--purple-white-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .music-player-progress{
     width: 100%;
-    height: 2%;
+    height: 3%;
 }
 .music-player-progress .progress{
     width: 30%;
@@ -212,14 +215,44 @@ body {
 #navbar-mobile ul li a i {
     font-size: 1.5rem;
 }
-
-/*! HOME MAIN */
+/*!............ Search Section .............*/
+#search-target{
+    position: relative;
+    display: none;
+}
+#search-target form{
+    width: 100%;
+}
+#search-target input{
+    width: 100%;
+    padding: 0.8rem 0.6rem 0.8rem 0.6rem;
+    outline: 0;
+    background-color: var(--purple-white-color);
+    border: 1px solid black;
+    color: var(--background-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+#search-target input::placeholder{
+    font-size: 0.9rem;
+}
+#search-target button{
+    color: var(--background-color);
+    font-size: 1.2rem;
+    position: absolute;
+    right: 1rem;
+    background-color: transparent;
+    border: 0;
+}
+#search-target:target{
+    display: flex;
+}
+/*!.............. HOME MAIN ..............*/
 #home-main {
     display: flex;
     flex-direction: column;
-    gap: 4vh;
+    gap: 3vh;
 }
-
 /*!..................... Musical Promo Banner ......................*/
 #banner-section {
     display: flex;
@@ -232,7 +265,6 @@ body {
     flex-basis: 50%;
     flex-shrink: 0;
 }
-
 #banner-section img {
     width: 100%;
 }
