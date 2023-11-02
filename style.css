@@ -110,12 +110,12 @@ body {
 }
 
 /*!....................... Home Header ..............*/
-#home-header {
+.main-header {
     height: fit-content;
 }
 
 /*!.................. Melody Logo ................*/
-#home-header #melody-logo {
+.main-header .logo {
     padding: 0.4rem 0px 0px 0.8rem;
 }
 /*!................. Bottom Fixed COntainer ................*/
@@ -400,7 +400,13 @@ body {
     font-weight: 600;
     color: var(--purple-white-color);
 } */
-
+.img-round{
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 0.2rem;
+}
 /*!................. Stations Section .................*/
 #home-main #stations-section {
     display: flex;
