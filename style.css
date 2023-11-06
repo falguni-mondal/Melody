@@ -17,6 +17,8 @@
 :root {
 
     --purple-blue-color: #6e57e0;
+    --purple-blue-color-medium: #7d62ff;
+    --purple-blue-color-dark: #332869;
     --purple-black-color: #242329;
     --purple-white-color: #fbfbfe;
     --purple-lite-white-color: #babad1;
@@ -78,23 +80,23 @@
 }
 
 /* Popular Artist, Latest English, Latest Hindi */
-.container {
+.horizontal-list {
     display: flex;
     gap: 0.8rem;
     overflow-x: auto;
 }
 
-.container>* {
+.horizontal-list>* {
     flex-basis: 20%;
     flex-shrink: 0;
     text-align: center;
 }
 
-.container .element img {
+.horizontal-list .list-item img {
     width: 100%;
 }
 
-.container .element h3 {
+.horizontal-list .list-item h3 {
     font-size: 0.58rem;
     font-weight: 600;
     color: var(--purple-white-color);
@@ -105,8 +107,9 @@
 /*!........... Home Body.............. */
 body {
     width: 100vw;
+    height: 100vh;
+    overflow: auto;
     background-color: var(--background-color);
-    padding-bottom: 17vh;
 }
 
 /*!....................... Home Header ..............*/
@@ -116,142 +119,16 @@ body {
 
 /*!.................. Melody Logo ................*/
 .main-header .logo {
-    padding: 0.4rem 0px 0px 0.8rem;
-}
-/*!................. Bottom Fixed COntainer ................*/
-#home-header #bottom-fixed-container{
-    position: fixed;
-    border-radius: 10px 10px 0px 0px;
-    box-shadow: 0px 0px 30px black;
-    z-index: 100;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    border-radius: 5px 5px 0px 0px;
-    overflow: hidden;
-}
-/*!.............. Mobile Minimized Music Player ...................*/
-#bottom-fixed-container #music-player-mini-mobile{
-    width: 100%;
-    height: 7vh;
-    background-color: var(--background-color-lite);
-    padding: 0.2rem 1rem 0px 0.5rem;
-}
-#mini-player-mobile{
-    width: 100%;
-    height: 97%;
-}
-#mini-player-mobile #mini-player-img{
-    height: 95%;
-    width: fit-content;
-}
-#mini-player-img img{
-    height: 100%;
-}
-.music-controls{
-    width: 60%;
-    display: flex;
-    gap: 2.5rem;
-    justify-content: center;
-}
-.music-controls a,
-.music-favourite a{
-    color: var(--purple-white-color);
-    font-size: 1.2rem;
-}
-.music-player-progress{
-    width: 100%;
-    height: 3%;
-}
-.music-player-progress .progress{
-    width: 30%;
-    height: 100%;
-    background-color: var(--purple-white-color);
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.music-player-progress .progress i{
-    position: absolute;
-    color: var(--purple-white-color);
-    right: -3px;
-    font-size: 0.5rem;
-}
-/*!..................... Mobile Navigation Bar ..................*/
-#bottom-fixed-container #navbar-mobile {
-    /* background-color: var(--background-color); */
-    background-image: linear-gradient(rgba(0, 5, 27, 0.8), rgba(11, 16, 38, 1) 50%);
-    height: 7.5vh;
+    padding: 0.6rem 0px 0px 0.8rem;
 }
 
-#navbar-mobile ul {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-}
-
-#navbar-mobile ul li {
-    width: 25%;
-    list-style: none;
-}
-
-#navbar-mobile ul li a {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: var(--purple-lite-white-color);
-    font-size: 0.8rem;
-}
-
-#navbar-mobile ul li a {
-    font-size: 0.6rem;
-    font-weight: 500;
-}
-
-#navbar-mobile ul li a i {
-    font-size: 1.5rem;
-}
-/*!............ Search Section .............*/
-#search-target{
-    position: relative;
-    display: none;
-}
-#search-target form{
-    width: 100%;
-}
-#search-target input{
-    width: 100%;
-    padding: 0.8rem 0.6rem 0.8rem 0.6rem;
-    outline: 0;
-    background-color: var(--purple-white-color);
-    border: 1px solid black;
-    color: var(--background-color);
-    font-weight: 500;
-    font-size: 1rem;
-}
-#search-target input::placeholder{
-    font-size: 0.9rem;
-}
-#search-target button{
-    color: var(--background-color);
-    font-size: 1.2rem;
-    position: absolute;
-    right: 1rem;
-    background-color: transparent;
-    border: 0;
-}
-#search-target:target{
-    display: flex;
-}
 /*!.............. HOME MAIN ..............*/
-#home-main {
+.main-container {
     display: flex;
     flex-direction: column;
     gap: 3vh;
+    justify-content: space-between;
+    padding-bottom: 17vh;
 }
 /*!..................... Musical Promo Banner ......................*/
 #banner-section {
@@ -408,14 +285,14 @@ body {
     margin-bottom: 0.2rem;
 }
 /*!................. Stations Section .................*/
-#home-main #stations-section {
+.main-container #stations-section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     flex-wrap: wrap;
 }
 
-#home-main #stations-section .container {
+.main-container #stations-section #stations-container {
     display: flex;
     background-color: var(--background-color-lite);
     justify-content: space-between;
@@ -424,32 +301,32 @@ body {
     overflow-x: auto;
 }
 
-#home-main #stations-section #stations-logo-container {
+.main-container #stations-section #stations-logo {
     flex-direction: column;
     flex-basis: 25%;
     height: 10vh;
     background-image: url('resources/station_logoBg_low.png');
 }
 
-#home-main #stations-section #stations-logo-container img {
+.main-container #stations-section #stations-logo img {
     width: 40%;
 }
 
-#home-main #stations-section .container ul {
+.main-container #stations-section #stations-container ul {
     display: flex;
     gap: 1rem;
     flex-basis: 70%;
     flex-shrink: 0;
 }
 
-#home-main #stations-section .container ul li {
+.main-container #stations-section #stations-container ul li {
     flex-basis: 25%;
     flex-shrink: 0;
     list-style: none;
     border-radius: 50%;
 }
 
-#home-main #stations-section a {
+.main-container #stations-section a {
     text-decoration: none;
     height: 100%;
     width: 100%;
@@ -459,7 +336,7 @@ body {
     z-index: 10;
 }
 
-#home-main #stations-section h3,
+.main-container #stations-section h3,
 h4 {
     color: var(--purple-white-color);
     font-size: 0.6rem;
@@ -491,13 +368,13 @@ h4 {
 }
 
 /*!..................... 2nd Line of Stations ..................*/
-#home-main #stations-section #sec-line {
+.main-container #stations-section #sec-line {
     width: 100%;
     justify-content: space-between;
     gap: 0px;
 }
 
-#home-main #stations-section #sec-line>* {
+.main-container #stations-section #sec-line>* {
     flex-basis: 32%;
     flex-shrink: 0;
 }
@@ -573,4 +450,301 @@ h4 {
 #latest-eng-container h3,
 #latest-hindi-container h3 {
     font-size: 0.65rem;
+}
+
+/*!................. Bottom Fixed Container ................*/
+.bottom-fixed-container{
+    position: fixed;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 30px black;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+}
+/*!.............. Mobile Minimized Music Player ...................*/
+.bottom-fixed-container .mini-player-container{
+    width: 100%;
+    height: 7vh;
+    background-color: var(--background-color-lite);
+    padding: 0.2rem 1rem 0px 0.5rem;
+}
+.mini-player{
+    width: 100%;
+    height: 97%;
+}
+.mini-player #mini-player-img{
+    height: 95%;
+    width: fit-content;
+}
+.mini-player #mini-player-img img{
+    height: 100%;
+}
+.mini-player #music-details{
+    color: var(--purple-white-color);
+    font-size: 0.6rem;
+}
+.mini-player #music-details h3{
+    font-weight: 600;
+}
+.music-controls{
+    width: 60%;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+}
+.music-controls a,
+.music-favourite a{
+    color: var(--purple-white-color);
+    font-size: 1.2rem;
+}
+.music-player-progress{
+    width: 100%;
+    height: 3%;
+}
+.music-player-progress .progress{
+    width: 30%;
+    height: 100%;
+    background-color: var(--purple-white-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.music-player-progress .progress i{
+    position: absolute;
+    color: var(--purple-white-color);
+    right: -3px;
+    font-size: 0.5rem;
+}
+/*!..................... Mobile Navigation Bar ..................*/
+.bottom-fixed-container .navbar-mobile {
+    /* background-color: var(--background-color); */
+    background-image: linear-gradient(rgba(0, 5, 27, 0.8), rgba(0, 0, 0, 1) 50%);
+    height: 7.5vh;
+}
+
+.navbar-mobile ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.navbar-mobile ul li {
+    width: 25%;
+    list-style: none;
+}
+
+.navbar-mobile ul li a {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--purple-lite-white-color);
+    font-size: 0.8rem;
+}
+
+.navbar-mobile ul li a {
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+.navbar-mobile ul li a i {
+    font-size: 1.5rem;
+}
+/*!............ Search Section .............*/
+#search-target{
+    position: relative;
+    display: none;
+}
+#search-target form{
+    width: 100%;
+}
+#search-target input{
+    width: 100%;
+    padding: 0.8rem 0.6rem 0.8rem 0.6rem;
+    outline: 0;
+    background-color: var(--purple-white-color);
+    border: 1px solid black;
+    color: var(--background-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+#search-target input::placeholder{
+    font-size: 0.9rem;
+}
+#search-target button{
+    color: var(--background-color);
+    font-size: 1.2rem;
+    position: absolute;
+    right: 1rem;
+    background-color: transparent;
+    border: 0;
+}
+#search-target:target{
+    display: flex;
+}
+
+/*!.................. ARTIST MUSIC HTML ..................*/
+.artist-img-container{
+    height: 30vh;
+    width: 100vw;
+    justify-content: space-between;
+    gap: 0;
+    position: fixed;
+}
+.artist-img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('resources/arijit_singh.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.artist-img::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color-lite);
+    opacity: 0.3;
+}
+
+/*.............. Desktop ............*/
+.artist-details{
+    position: absolute;
+    background-color: var(--background-color-lite);
+    width: 48%;
+    height: 100%;
+    right: 0;
+    padding: 0.6rem 1rem;
+    /* rgb(19, 27, 64) */
+    display: none;
+}
+.artist-img-container p{
+    font-size: 0.6rem;
+    color: var(--purple-lite-white-color);
+}
+.artist-img-container h1{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--purple-white-color);
+}
+.artist-name p{
+    font-weight: 600;
+}
+.bio{
+    margin-top: 0.4rem;
+}
+.play-all{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: 0.4rem;
+}
+.play-all button{
+    width: 50%;
+    color: var(--purple-white-color);
+    background-color: var(
+    --background-color);
+    border: 0;
+    border-radius: 3px;
+    padding: 0.2rem 0px;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+.play-all p{
+    color: var(--purple-white-color);
+}
+/* ............................................... */
+
+.artist-playlist-container{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    position: relative;
+    top: 20.9vh;
+    flex-direction: column;
+    border-radius: 10px 10px 0px 0px;
+}
+.artist-playlist-container .artist-name{
+    padding: 0px 0px 0.5rem 1rem;
+    color: var(--purple-white-color);
+}
+.artist-playlist-container .artist-name h1{
+    font-size: 2rem;
+}
+.artist-playlist-container .artist-name p{
+    font-size: 0.8rem;
+    color: var(--purple-lite-white-color);
+}
+.artist-playlist{
+    background-image: linear-gradient(#332869, #0b1026 8%);
+    width: 100%;
+    padding: 0px 1rem ;
+}
+.artist-playlist .artist-options{
+    display: grid;
+    padding-top: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-weight: 600;
+}
+.artist-options p{
+    grid-area: 1/1/2/2;
+    color: var(--purple-white-color);
+    font-size: 0.8rem;
+}
+.artist-options button{
+    grid-area: 2/1/3/2;
+    color: var(--purple-white-color);
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--purple-white-color);
+    width: 60%;
+    padding: 0.4rem 0px;
+    font-weight: 600;
+}
+.artist-options i{
+    grid-area: 1/2/3/3;
+    font-size: 3rem;
+    color: var(--purple-blue-color-medium);
+    justify-self: end;
+    align-self: center;
+}
+.artist-playlist ul{
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem 0px 16vh 0px;
+    gap: 0.8rem;
+}
+.artist-playlist ul li{
+    /* background-color: var(--background-color-lite); */
+    width: 100%;
+    list-style: none;
+    height: 6vh;
+    border-radius: 3px;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: var(--purple-white-color);
+}
+.artist-playlist .music{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    height: 100%;
+}
+.artist-playlist .music img{
+    height: 90%;
+}
+.artist-playlist .music h6{
+    width: 0.8rem;
+}
+.artist-playlist .music h6, h3{
+    font-size: 0.85rem;
+    font-weight: 500;
 }
