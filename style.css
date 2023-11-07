@@ -69,6 +69,7 @@
 .stations-2 {
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 .stations-2::after {
@@ -121,7 +122,10 @@ body {
 .main-header .logo {
     padding: 0.6rem 0px 0px 0.8rem;
 }
-
+.main-header .logo a img{
+    /* width: 23%; */
+    width: 7.3rem;
+}
 /*!.............. HOME MAIN ..............*/
 .main-container {
     display: flex;
@@ -163,7 +167,6 @@ body {
 
 #latest-music-container .img-container{
     width: 30%;
-    height: 100%;
     position: relative;
     display: flex;
     align-items: center;
@@ -171,7 +174,6 @@ body {
 }
 #latest-music-container .img-container img{
     width: 100%;
-    height: 100%;
 }
 #latest-music-container .img-container i{
     font-size: 1.5rem;
@@ -295,7 +297,8 @@ body {
 .main-container #stations-section #stations-container {
     display: flex;
     background-color: var(--background-color-lite);
-    justify-content: space-between;
+    justify-content: start;
+    gap: 1.050rem;
     align-items: center;
     padding: 0.8rem;
     overflow-x: auto;
@@ -589,6 +592,8 @@ h4 {
     display: flex;
 }
 
+
+
 /*!.................. ARTIST MUSIC HTML ..................*/
 .artist-img-container{
     height: 30vh;
@@ -708,6 +713,7 @@ h4 {
     width: 60%;
     padding: 0.4rem 0px;
     font-weight: 600;
+    font-size: 0.8rem;
 }
 .artist-options i{
     grid-area: 1/2/3/3;
@@ -747,4 +753,80 @@ h4 {
 .artist-playlist .music h6, h3{
     font-size: 0.85rem;
     font-weight: 500;
+}
+
+/*!.......................... MEDIA_QUERIES ........................*/
+
+@media(min-width: 500px){
+    html{
+        font-size: 20px;
+    }
+
+}
+@media(min-width: 600px){
+    html{
+        font-size: 24px;
+    }
+}
+@media(min-width: 768px){
+    html{
+        font-size: 22.5px;
+    }
+    /*! Reusable Code */
+    .height-10vh{
+        height: 9vh;
+    }
+    .horizontal-list>* {
+        flex-basis: 13.5%;
+    }
+    /*! ........................... */
+    .main-header .logo a img{
+        width: 17%;
+        /* width: 7.3rem; */
+    }
+    .main-container {
+        gap: 2vh;
+        padding-bottom: 17vh;
+    }
+    /* Banner Section */
+    .main-container #banner-section>* {
+        flex-basis: 35%;
+        flex-shrink: 0;
+    }
+    /* Latest Music Section */
+    #latest-music-container .img-container{
+        width: 20%;
+    }
+    /* Stations Section */
+    .main-container #stations-section #stations-logo {
+        flex-basis: 18%;
+    }
+    .main-container #stations-section #stations-container ul {
+        flex-basis: 82%;
+        gap: 0;
+    }
+    .main-container #stations-section #stations-container ul li {
+        flex-basis: 20%;
+    }
+    /* Station Section 2nd Line */
+    .main-container #stations-section #sec-line{
+        height: 13vh;
+    }
+    /* Music Player Mini */
+    .music-controls{
+        width: 73%;
+    }
+    /*! Artist Music Page */
+    .artist-img-container{
+        height: 44vh;
+    }
+    .artist-playlist-container{
+        top: 30.5vh;
+    }
+    .artist-playlist-container .artist-name h1{
+        font-size: 2.2rem;
+    }
+    .artist-playlist-container .artist-name p{
+        font-size: 1rem;
+    }
 }
