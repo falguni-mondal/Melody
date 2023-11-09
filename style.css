@@ -123,8 +123,8 @@ body {
     padding: 0.6rem 0px 0px 0.8rem;
 }
 .main-header .logo a img{
-    /* width: 23%; */
-    width: 7.3rem;
+    width: 23%;
+    /* width: 7.3rem; */
 }
 /*!.............. HOME MAIN ..............*/
 .main-container {
@@ -211,6 +211,7 @@ body {
 .music-details-container .music-name h3 {
     color: var(--purple-white-color);
     font-weight: 600;
+    font-size: 0.8rem;
 }
 
 .music-details-container .option-icon-rating {
@@ -453,6 +454,9 @@ h4 {
 #latest-eng-container h3,
 #latest-hindi-container h3 {
     font-size: 0.65rem;
+}
+.latest-hinglish > *{
+    flex-basis: 18%;
 }
 
 /*!................. Bottom Fixed Container ................*/
@@ -757,17 +761,89 @@ h4 {
 
 /*!.......................... MEDIA_QUERIES ........................*/
 
-@media(min-width: 500px){
+@media(max-width: 380px){
+
+    html{
+        font-size: 14.8px;
+    }
+        /* Music Player Mini */
+        .music-controls{
+            width: 58%;
+        }
+        /*! Artist Music Page */
+        .artist-img-container{
+            height: 34vh;
+        }
+        .artist-playlist-container{
+            top: 24vh;
+        }
+}
+
+
+@media(min-width: 600px){
     html{
         font-size: 20px;
     }
-
-}
-@media(min-width: 600px){
-    html{
-        font-size: 24px;
+    /*! Reusable Code */
+    .height-10vh{
+        height: 11vh;
+    }
+    .horizontal-list>* {
+        flex-basis: 16%;
+    }
+    /*! ........................... */
+    .main-header .logo a img{
+        width: 20%;
+        /* width: 7.3rem; */
+    }
+    .main-container {
+        gap: 3vh;
+        padding-bottom: 17vh;
+    }
+    /* Banner Section */
+    .main-container #banner-section>* {
+        flex-basis: 43%;
+        flex-shrink: 0;
+    }
+    /* Latest Music Section */
+    #latest-music-container .img-container{
+        width: 24%;
+    }
+    /* Stations Section */
+    .main-container #stations-section #stations-logo {
+        flex-basis: 20%;
+    }
+    .main-container #stations-section #stations-container ul {
+        flex-basis: 80%;
+        gap: 0.8rem;
+    }
+    .main-container #stations-section #stations-container ul li {
+        flex-basis: 17%;
+    }
+    /* Station Section 2nd Line */
+    .main-container #stations-section #sec-line{
+        height: 12vh;
+    }
+    /* Music Player Mini */
+    .music-controls{
+        width: 68%;
+    }
+    /*! Artist Music Page */
+    .artist-img-container{
+        height: 38vh;
+    }
+    .artist-playlist-container{
+        top: 27.5vh;
+    }
+    .artist-playlist-container .artist-name h1{
+        font-size: 2.2rem;
+    }
+    .artist-playlist-container .artist-name p{
+        font-size: 1rem;
     }
 }
+
+
 @media(min-width: 768px){
     html{
         font-size: 22.5px;
@@ -785,7 +861,7 @@ h4 {
         /* width: 7.3rem; */
     }
     .main-container {
-        gap: 2vh;
+        gap: 3vh;
         padding-bottom: 17vh;
     }
     /* Banner Section */
@@ -803,14 +879,18 @@ h4 {
     }
     .main-container #stations-section #stations-container ul {
         flex-basis: 82%;
-        gap: 0;
+        gap: 1rem;
     }
     .main-container #stations-section #stations-container ul li {
-        flex-basis: 20%;
+        flex-basis: 14%;
     }
     /* Station Section 2nd Line */
     .main-container #stations-section #sec-line{
         height: 13vh;
+    }
+    /* Latest Hindi & Englist */
+    .latest-hinglish > *{
+        flex-basis: 12%;
     }
     /* Music Player Mini */
     .music-controls{
