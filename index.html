@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Falguni Mondal">
+    <meta name="keywords"
+        content="melody, melody home, melody by falguni mondal, melody music streaming site, melody webapp, melody falguni mondal, melody github, github melody, melody by falguni, melody falguni, melody by falguni github, melody by falguni mondal github, melody music streaming platform, melody music">
+    <meta name="description" content="Find your desired songs on Melody and stream them free with high quality.">
     <link rel="shortcut icon" type="image/x-icon" href="resources/melody-site-icon.png">
-    <title>Arijit Singh Hits | Melody</title>
+    <title>Melody | Home</title>
     <!--! ICON -->
     <!-- Css icons -->
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-pause.css' rel='stylesheet'>
@@ -19,8 +23,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header class="main-header">
+<body id="home-body">
+    <header id="home-header" class="main-header">
+        <div class="logo" id="melody-logo">
+            <a href="index.html"><img src="resources/melody_logo_low.png" alt="melody"></a>
+        </div>
         <!-- Search Section -->
         <section id="search-target">
             <form action="search_result.html" class="flex-properties">
@@ -29,245 +36,372 @@
             </form>
         </section>
     </header>
-    <main>
+    <!--....................... HOME MAIN .......................-->
+    <main id="home-main">
         <div class="main-container">
-
-            <div class="artist-img-container flex-properties">
-                <div class="artist-img">
+            <!-- Music Banner Section -->
+            <section id="banner-section">
+                <div><a href=""><img src="resources/banner_img1.jpg" alt=""></a></div>
+                <div><a href=""><img src="resources/banner_img2.jpg" alt=""></a></div>
+                <div><a href=""><img src="resources/banner_img3.jpg" alt=""></a></div>
+                <div><a href=""><img src="resources/banner_img4.jpg" alt=""></a></div>
+            </section>
+            <!-- Latest Release Section -->
+            <section id="latest-release-section">
+                <h2 class="section-title">Latest Release</h2>
+                <!-- Latest Music Container -->
+                <div id="latest-music-container" class="section-content">
+                    <!-- Music 1 -->
+                    <div class="music-container">
+                        <div class="img-container">
+                            <i class="fa-solid fa-play play"></i>
+                            <i class="fa-solid fa-pause pause"></i>
+                            <img src="resources/lal_ishq_music.jpg" alt="" class="music-image" id="1st-music">
+                        </div>
+                        <div class="music-details-container">
+                            <div class="music-name">
+                                <h3 class="music-title">Lal Ishq</h3>
+                                <p>OCT 22, 2023</p>
+                            </div>
+                            <div class="option-icon-rating">
+                                <a href="#music-option-container1">
+                                    <i class="uil uil-ellipsis-h"></i>
+                                </a>
+                                <ul class="music-option-container" id="music-option-container1">
+                                    <li class="border-bottom-white"><a href=""><i class="fa-solid fa-play"></i>Play
+                                            Now</a>
+                                    </li>
+                                    <li class="border-bottom-white"><a href=""><i
+                                                class="fa-solid fa-bars-staggered"></i>Add
+                                            To Queue</a></li>
+                                    <li class="border-bottom-white"><a href=""><i class="fa-solid fa-plus"></i>Add To
+                                            Favourites</a></li>
+                                    <li><a href=""><i class="fa-solid fa-circle-info"></i>Get Info</a></li>
+                                </ul>
+                                <p>4.8</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Music 2 -->
+                    <div class="music-container">
+                        <div class="img-container">
+                            <i class="fa-solid fa-play play"></i>
+                            <i class="fa-solid fa-pause pause"></i>
+                            <img src="resources/until_i_found_you_music.jpg" alt="" class="music-image" id="2nd-music">
+                        </div>
+                        <div class="music-details-container">
+                            <div class="music-name">
+                                <h3 class="music-title">Until I Found You</h3>
+                                <p>AUG 19, 2023</p>
+                            </div>
+                            <div class="option-icon-rating">
+                                <a href="#music-option-container2">
+                                    <i class="uil uil-ellipsis-h"></i>
+                                </a>
+                                <ul class="music-option-container" id="music-option-container2">
+                                    <li class="border-bottom-white"><a href=""><i class="fa-solid fa-play"></i>Play
+                                            Now</a>
+                                    </li>
+                                    <li class="border-bottom-white"><a href=""><i
+                                                class="fa-solid fa-bars-staggered"></i>Add
+                                            To Queue</a></li>
+                                    <li class="border-bottom-white"><a href=""><i class="fa-solid fa-plus"></i>Add To
+                                            Favourites</a></li>
+                                    <li><a href=""><i class="fa-solid fa-circle-info"></i>Get Info</a></li>
+                                </ul>
+                                <p>4.6</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Music 3 -->
+                    <div class="music-container">
+                        <div class="img-container">
+                            <i class="fa-solid fa-play play"></i>
+                            <i class="fa-solid fa-pause pause"></i>
+                            <img src="resources/bolo_na_music.jpg" alt="" class="music-image" id="3rd-music">
+                        </div>
+                        <div class="music-details-container">
+                            <div class="music-name">
+                                <h3 class="music-title">Bolo Na</h3>
+                                <p>NOV 13, 2023</p>
+                            </div>
+                            <div class="option-icon-rating">
+                                <a href="#music-option-container3">
+                                    <i class="uil uil-ellipsis-h"></i>
+                                </a>
+                                <ul class="music-option-container" id="music-option-container3">
+                                    <li class="border-bottom-white"><a href=""><i class="fa-solid fa-play"></i>Play
+                                            Now</a>
+                                    </li>
+                                    <li class="border-bottom-white"><a href=""><i
+                                                class="fa-solid fa-bars-staggered"></i>Add
+                                            To Queue</a></li>
+                                    <li class="border-bottom-white"><a href=""><i class="fa-solid fa-plus"></i>Add To
+                                            Favourites</a></li>
+                                    <li><a href=""><i class="fa-solid fa-circle-info"></i>Get Info</a></li>
+                                </ul>
+                                <p>4.7</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Music 4 -->
+                    <div class="music-container">
+                        <div class="img-container">
+                            <i class="fa-solid fa-play play"></i>
+                            <i class="fa-solid fa-pause pause"></i>
+                            <img src="resources/oboseshe_poster.jpg" alt="" class="music-image" id="4th-music">
+                        </div>
+                        <div class="music-details-container">
+                            <div class="music-name">
+                                <h3 class="music-title">Oboseshe</h3>
+                                <p>OCT 08, 2023</p>
+                            </div>
+                            <div class="option-icon-rating">
+                                <i class="uil uil-ellipsis-h music-option-icon"></i>
+                                <ul class="music-option-container" id="music-option-container4">
+                                    <li class="border-bottom-white"><a href=""><i class="fa-solid fa-play"></i>Play
+                                            Now</a>
+                                    </li>
+                                    <li class="border-bottom-white"><a href=""><i
+                                                class="fa-solid fa-bars-staggered"></i>Add
+                                            To Queue</a></li>
+                                    <li class="border-bottom-white"><a href=""><i class="fa-solid fa-plus"></i>Add To
+                                            Favourites</a></li>
+                                    <li><a href=""><i class="fa-solid fa-circle-info"></i>Get Info</a></li>
+                                </ul>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="artist-details">
-                    <div class="artist-name">
-                        <h1>Arijit Singh</h1>
-                        <p>4.1Cr monthly listeners</p>
+            </section>
+            <section id="popular-artist-section">
+                <h2 class="section-title">Popular Artists</h2>
+                <div class="horizontal-list section-content" id="artist-container">
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/arijit_singh1.jpg" alt="arijit singh"></a>
+                        </div>
+                        <h3>Arijit Singh</h3>
                     </div>
-                    <div class="bio">
-                        <p>Indian playback singer and music composer. The recipient of several accolades including a
-                            National Film Award and seven Filmfare Awards, he has recorded songs in several Indian
-                            languages.</p>
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/shreya_ghoshal.jpg"
+                                    alt="shreya ghoshal"></a>
+                        </div>
+                        <h3>Shreya Ghoshal</h3>
                     </div>
-                    <div class="play-all">
-                        <button>Play</button>
-                        <p>Over 500 songs | 243 albums</p>
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/tailor_swift.jpg" alt="tailor swift"></a>
+                        </div>
+                        <h3>Taylor Swift</h3>
+                    </div>
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/ariana_grande.jpg" alt="ariana grande"></a>
+                        </div>
+                        <h3>Ariana Grande</h3>
+                    </div>
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/ed_sheeran.jpg" alt="ed sheeran"></a>
+                        </div>
+                        <h3>Ed Sheeran</h3>
+                    </div>
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/sonu_nigam.jpg" alt="sonu nigam"></a>
+                        </div>
+                        <h3>Sonu Nigam</h3>
+                    </div>
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/pritam.jpg" alt="pritam"></a>
+                        </div>
+                        <h3>Pritam</h3>
+                    </div>
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/charlie_puth.jpg" alt="charlie puth"></a>
+                        </div>
+                        <h3>Charlie Puth</h3>
+                    </div>
+                    <div class="list-item">
+                        <div class="img-round">
+                            <a href="artist_music.html"><img src="resources/bruno_mars.jpg" alt="bruno mars"></a>
+                        </div>
+                        <h3>Bruno Mars</h3>
                     </div>
                 </div>
-            </div>
-
-            <div class="artist-playlist-container">
-                <div class="artist-name">
-                    <h1>Arijit Singh</h1>
-                    <p>4.1Cr monthly listeners</p>
-                </div>
-                <div class="artist-playlist">
-                    <div class="artist-options">
-                        <p>Over 6.5Cr followers</p>
-                        <button>Follow</button>
-                        <i class="fa-solid fa-circle-play"></i>
+            </section>
+            <section id="stations-section">
+                <div id="stations-container">
+                    <div id="stations-logo" class="flex-properties background-img height-10vh">
+                        <img src="resources/station_logo_low.png" alt="">
+                        <h3>Stations</h3>
                     </div>
-                    <ul class="flex-properties artist-music-ul">
-                        <li class="flex-properties artist-music-li">
-                            <div class="music">
-                                <h6>1</h6>
-                                <img src="resources/chaleya_poster.jpg" alt="">
-                                <h3>Chaleya</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <ul id="stations-option-container">
+                        <li class="stations-option flex-properties background-img height-10vh" id="love-stations">
+                            <a href="">
+                                <h4>Love</h4>
+                            </a>
                         </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>2</h6>
-                                <img src="resources/heeriye-poster.jpg" alt="">
-                                <h3>Heeriye</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <li class="stations-option flex-properties background-img height-10vh" id="retro-stations">
+                            <a href="">
+                                <h4>Retro</h4>
+                            </a>
                         </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>3</h6>
-                                <img src="resources/jhumka-poster.jpg" alt="">
-                                <h3>What Jhumka ? (From "Rocky...</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <li class="stations-option flex-properties background-img height-10vh" id="chill-stations">
+                            <a href="">
+                                <h4>Chill</h4>
+                            </a>
                         </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>4</h6>
-                                <img src="resources/kesariya-poster.jpg" alt="">
-                                <h3>Kesariya</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <li class="stations-option flex-properties background-img height-10vh" id="workout-stations">
+                            <a href="">
+                                <h4>Workout</h4>
+                            </a>
                         </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>5</h6>
-                                <img src="resources/tere-hawale-poster.jpg" alt="">
-                                <h3>Tere Hawale From Lal Singh...</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <li class="stations-option flex-properties background-img height-10vh" id="rock-stations">
+                            <a href="">
+                                <h4>Rock</h4>
+                            </a>
                         </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>6</h6>
-                                <img src="resources/tera-yaar-hoon-main-poster.jpg" alt="">
-                                <h3>Tera Yaar Hoon Main</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>7</h6>
-                                <img src="resources/channa-mereya-poster.jpg" alt="">
-                                <h3>Channa Mereya</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>8</h6>
-                                <img src="resources/kalank-title-track-poster.jpg" alt="">
-                                <h3>Kalank Title Track</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>9</h6>
-                                <img src="resources/agar-tum-saath-ho-poster.jpg" alt="">
-                                <h3>Agar Tum Saath Ho</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>10</h6>
-                                <img src="resources/ae-dil-hai-mushkil-poster.jpg" alt="">
-                                <h3>Ae Dil Hai Mushkil</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>11</h6>
-                                <img src="resources/deva-deva-poster.jpg" alt="">
-                                <h3>Deva Deva</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>12</h6>
-                                <img src="resources/atak-gaya-poster.jpg" alt="">
-                                <h3>Atak Gaya</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>13</h6>
-                                <img src="resources/apna-bana-le-poster.jpg" alt="">
-                                <h3>Apna Bana Le</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>14</h6>
-                                <img src="resources/bandeya-from-dil-juunglee-poster.jpg" alt="">
-                                <h3>Bandeya (From Dil Juunglee)</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>15</h6>
-                                <img src="resources/khairiyat-poster.jpg" alt="">
-                                <h3>Khairiyat</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>16</h6>
-                                <img src="resources/ishq-mubarak-poster.jpg" alt="">
-                                <h3>Ishq Mubarak</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>17</h6>
-                                <img src="resources/pathan-poster.jpg" alt="">
-                                <h3>Jhoome Jo Pathan</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>18</h6>
-                                <img src="resources/shayad-poster.jpg" alt="">
-                                <h3>Shayad</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>19</h6>
-                                <img src="resources/saware-poster.jpg" alt="">
-                                <h3>Saware</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>20</h6>
-                                <img src="resources/chedkhaniyan-poster.jpg" alt="">
-                                <h3>Chedkhaniyan</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>21</h6>
-                                <img src="resources/dekha-hazaro-dafaa-poster.jpg" alt="">
-                                <h3>Dekha Hazaro Dafa</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>22</h6>
-                                <img src="resources/phir-aur kya-chahiye-poster.jpg" alt="">
-                                <h3>Phir Aur Kya Chahiye</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>23</h6>
-                                <img src="resources/tere-pyar-mein-poster.jpg" alt="">
-                                <h3>Tere Pyar Mein</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>24</h6>
-                                <img src="resources/hum-nashe-mein-toh-nahin-poster.jpg" alt="">
-                                <h3>Hum Nashe Mein Toh Nahin</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </li>
-                        <li class="flex-properties">
-                            <div class="music">
-                                <h6>25</h6>
-                                <img src="resources/makhmali-poster.jpg" alt="">
-                                <h3>Makhmali</h3>
-                            </div>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <li class="stations-option flex-properties background-img height-10vh" id="pop-stations">
+                            <a href="">
+                                <h4>Pop</h4>
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </div>
+                <div id="sec-line" class="flex-properties height-10vh">
+                    <div class="flex-properties background-img stations-2" id="party-stations">
+                        <img src="resources/party_stations_low.png" alt="" class="zoom-img-stations">
+                        <a href="">
+                            <h4>Party</h4>
+                        </a>
+                    </div>
+                    <div class="flex-properties background-img stations-2" id="electronic-stations">
+                        <img src="resources/electronic_stations_low.png" alt="electronic" class="zoom-img-stations">
+                        <a href="">
+                            <h4>Electronic</h4>
+                        </a>
+                    </div>
+                    <div class="flex-properties background-img stations-2" id="road-stations">
+                        <img src="resources/road_stations_low.png" alt="road-trip" class="zoom-img-stations">
+                        <a href="">
+                            <h4>Road Trip</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="latest-eng-section">
+                <h2 class="section-title">Latest English</h2>
+                <div class="horizontal-list section-content latest-hinglish" id="latest-eng-container">
+                    <div class="list-item">
+                        <a href=""><img src="resources/calm_down_poster.jpg" alt="calm down"></a>
+                        <h3>Calm Down</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/dreamer_poster.jpg" alt="dreamer"></a>
+                        <h3>Dreamer</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/daylight_poster.jpg" alt="daylight"></a>
+                        <h3>Daylight</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/Seven-feat-Latto_poster.jpg" alt="seven"></a>
+                        <h3>Seven</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/cupid_poster.jpg" alt="cupid"></a>
+                        <h3>Cupid</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/flowers_poster.jpg" alt="flowers"></a>
+                        <h3>Flowers</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/strangers_poster.jpg" alt="strangers"></a>
+                        <h3>Strangers</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/just_us_poster.jpg" alt=""></a>
+                        <h3>Just Us</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/single_soon_poster.jpg" alt=""></a>
+                        <h3>Single Soon</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/angel_poster.jpg" alt=""></a>
+                        <h3>Angel</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/presha_poster.jpg" alt=""></a>
+                        <h3>Presha</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/dreaming_poster.jpg" alt=""></a>
+                        <h3>Dreaming</h3>
+                    </div>
+                </div>
+            </section>
 
+            <section id="latest-hindi-section">
+                <h2 class="section-title">Latest Hindi</h2>
+                <div class="horizontal-list section-content latest-hinglish" id="latest-hindi-container">
+                    <div class="list-item">
+                        <a href=""><img src="resources/siya_ram_poster.jpg" alt="siya ram"></a>
+                        <h3>Siya Ram</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/chaleya_poster.jpg" alt="chaleya"></a>
+                        <h3>Chaleya</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/hua_main_poster.jpg" alt="hua main"></a>
+                        <h3>Hua Main</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/bhool_jaa_poster.jpg" alt="bhool jaa"></a>
+                        <h3>Bhool Jaa</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/savaria_poster.jpg" alt="savaria"></a>
+                        <h3>Savaria</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/faraatta_poster.jpg" alt="faraatta"></a>
+                        <h3>Faraatta</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/bhula_du_poster.jpg" alt="bhula du"></a>
+                        <h3>Bhula Du</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/aakhir_poster.jpg" alt=""></a>
+                        <h3>Aakhir</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/chandni_poster.jpg" alt=""></a>
+                        <h3>Chandni</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/jaane_jaa_poster.jpg" alt=""></a>
+                        <h3>Jaane Jaa</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/guli_mata_poster.jpg" alt=""></a>
+                        <h3>Guli Mata</h3>
+                    </div>
+                    <div class="list-item">
+                        <a href=""><img src="resources/o-piya_poster.jpg" alt=""></a>
+                        <h3>O Piya</h3>
+                    </div>
+                </div>
+            </section>
             <div class="bottom-fixed-container">
                 <div class="mini-player-container">
                     <div class="flex-properties mini-player">
@@ -301,10 +435,15 @@
                 </nav>
             </div>
         </div>
+        <aside>
+            <h2>Queue List</h2>
+            <ul></ul>
+        </aside>
     </main>
     <footer>
 
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
