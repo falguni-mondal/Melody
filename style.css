@@ -14,6 +14,15 @@
 *::-webkit-scrollbar{
     display: none;
 }
+*::selection{
+    background: transparent;
+}
+/*!........... Home Body.............. */
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+}
 :root {
 
     --purple-blue-color: #6e57e0;
@@ -35,7 +44,7 @@
 }
 
 .section-title {
-    font-size: 1.3rem;
+    font-size: 5.5vw;
     color: var(--purple-white-color);
 }
 
@@ -98,20 +107,12 @@
 }
 
 .horizontal-list .list-item h3 {
-    font-size: 0.58rem;
+    font-size: 2.3vw;
     font-weight: 600;
     color: var(--purple-white-color);
 }
 
 /*!.................................................... */
-
-/*!........... Home Body.............. */
-body {
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    background-color: var(--background-color);
-}
 
 /*!....................... Home Header ..............*/
 .main-header {
@@ -127,12 +128,21 @@ body {
     /* width: 7.3rem; */
 }
 /*!.............. HOME MAIN ..............*/
+#home-main{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
 .main-container {
     display: flex;
     flex-direction: column;
     gap: 3vh;
     justify-content: space-between;
-    padding-bottom: 17vh;
+    padding-bottom: 16vh;
+    overflow-y: auto;
+}
+#home-main aside{
+    display: none;
 }
 /*!..................... Musical Promo Banner ......................*/
 #banner-section {
@@ -204,31 +214,30 @@ body {
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.6rem;
+    font-size: 2.4vw;
     color: var(--purple-lite-white-color);
 }
 
 .music-details-container .music-name h3 {
     color: var(--purple-white-color);
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 3.050vw;
 }
 
 .music-details-container .option-icon-rating {
     align-self: flex-start;
     text-align: center;
-    padding-right: 0.6rem;
-    font-size: 0.5rem;
+    padding-right: 3vw;
+    font-size: 2.5vw;
 }
 .music-details-container .option-icon-rating a{
     text-decoration: none;
-    font-size: 0.6rem;
     font-style: normal;
     font-weight: 600;
     color: var(--purple-lite-white-color);
 }
 .music-details-container .option-icon-rating i {
-    font-size: 1rem;
+    font-size: 4vw;
 }
 .option-icon-rating .music-option-container{
     position: absolute;
@@ -343,8 +352,9 @@ body {
 .main-container #stations-section h3,
 h4 {
     color: var(--purple-white-color);
-    font-size: 0.6rem;
+    font-size: 2.3vw;
     font-weight: 600;
+    filter: drop-shadow(0px 0px 10px black);
 }
 
 #love-stations {
@@ -453,7 +463,7 @@ h4 {
 /*! Latest English Song & Latest Hindi Song */
 #latest-eng-container h3,
 #latest-hindi-container h3 {
-    font-size: 0.65rem;
+    font-size: 2.5vw;
 }
 .latest-hinglish > *{
     flex-basis: 18%;
@@ -491,7 +501,7 @@ h4 {
 }
 .mini-player #music-details{
     color: var(--purple-white-color);
-    font-size: 0.6rem;
+    font-size: 2.4vw;
 }
 .mini-player #music-details h3{
     font-weight: 600;
@@ -556,12 +566,12 @@ h4 {
 }
 
 .navbar-mobile ul li a {
-    font-size: 0.6rem;
+    font-size: 2.5vw;
     font-weight: 500;
 }
 
 .navbar-mobile ul li a i {
-    font-size: 1.5rem;
+    font-size: 6vw;
 }
 /*!............ Search Section .............*/
 #search-target{
@@ -600,7 +610,7 @@ h4 {
 
 /*!.................. ARTIST MUSIC HTML ..................*/
 .artist-img-container{
-    height: 30vh;
+    height: 32.2vh;
     width: 100vw;
     justify-content: space-between;
     gap: 0;
